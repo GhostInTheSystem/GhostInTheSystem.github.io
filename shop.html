@@ -1,0 +1,67 @@
+<html class="shopPageHTML" id="shopPageHTML">
+    <head>
+        <link rel="stylesheet" href="general.css">
+        <script src="assets/script.js"></script>
+    </head>
+    <body class="shopPageBody" id="shopPageBody">
+        <script>
+            var container = document.querySelector("#shopPageHTML");
+            var mover = document.querySelector("#shopPageBody");
+
+            container.addEventListener("mousemove", function(e) {
+                firstPlantBgPosX = 500 + e.offsetX * .05 + "px"
+                firstPlantBgPosY = 500 + e.offsetY * .05 + "px"
+                secPlantBgPosX = 1250 + -e.offsetX * .04 + "px"
+                secPlantBgPosY = -e.offsetY * .03 + "px"
+
+                mover.style.backgroundPositionX = firstPlantBgPosX + ", " + secPlantBgPosX;
+                mover.style.backgroundPositionY = firstPlantBgPosY + ", " + secPlantBgPosY;
+            });
+
+            container.addEventListener("mouseenter", function() {
+            
+            setTimeout(function() {
+                mover.classList.add("no-more-slidey");
+                container.removeEventListener("mouseenter");
+            }, 250);
+            
+            });
+        </script>
+        <div class="navBar head3">
+            <span class="left">
+                <img src="assets/melodySheep_icon.png" height="20"></img>
+                <span>&nbsp;&nbsp;&nbsp;MELODYSHEEP</span>
+            </span>
+            <a class="right" href="about.html">ABOUT</a>
+            <a class="right" href="shop.html">SHOP</a>
+            <a class="right" href="music.html">MUSIC</a>
+            <a class="right" href="projects.html">PROJECTS</a>
+            <a class="right" href="index.html">HOME</a>
+        </div>
+        <div class="title">
+            <span class="head1">
+                SHOP<br>
+            </span>
+            <br>
+            <span class="head2">
+                IF YOU LIKE THE WORK BY MELODYSHEEP<br>
+                THEN EXPLORE THE SHOP<br>
+            </span>
+            <br>
+            <br>
+            <a class="titleButton" onclick="loadPage('Shop')">
+                Learn more
+            </a>
+        </div>
+        <div class="scrollNoticeContainer">
+            <div class="scrollNotice head2">
+                <span>SCROLL TO CONTINUE</span>
+            </div>
+        </div>
+        <div class="footer">
+            <img src="assets/youtube_icon.png" height="20"></img>
+            <img src="assets/facebook_icon.png" height="20"></img>
+            <img src="assets/twitter_icon.png" height="20"></img>
+        </div>
+    </body>
+</html>

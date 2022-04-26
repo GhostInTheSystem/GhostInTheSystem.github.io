@@ -1,0 +1,561 @@
+@font-face{
+    font-family: montBold;
+    src: url(assets/Montserrat/Montserrat-Bold.ttf)
+}
+
+@font-face{
+    font-family: montReg;
+    src: url(assets/Montserrat/Montserrat-Regular.ttf)
+}
+
+@font-face{
+    font-family: raleMed;
+    src: url(assets/Raleway/static/Raleway-Medium.ttf)
+}
+
+@font-face{
+    font-family: darkGrotReg;
+    src: url(assets/Darker_Grotesque/Darker_Grotesque/DarkerGrotesque-Regular.ttf)
+}
+
+@font-face{
+    font-family: darkGrotMed;
+    src: url(assets/Darker_Grotesque/Darker_Grotesque/DarkerGrotesque-Medium.ttf)
+}
+
+@font-face{
+    font-family: darkGrotBold;
+    src: url(assets/Darker_Grotesque/Darker_Grotesque/DarkerGrotesque-Bold.ttf)
+}
+
+html{
+    background-color: #131316;
+    color: #e5f5f8;
+}
+
+a {
+    color: #e5f5f8;
+    text-decoration: none;
+}
+
+.head1 {
+    font-size: 40px;
+    height: 53px;
+    font-family: montBold;
+}
+
+.head2 {
+    font-size: 17px;
+    height: 53px;
+    font-family: raleMed;
+}
+
+.head3 {
+    font-size: 17px;
+    height: 53px;
+    font-family: montBold;
+}
+
+.pStyle {
+    font-size: 16px;
+    height: 35px;
+    font-family: darkGrotReg;
+}
+
+.lib1 {
+    font-size: 14px;
+    height: 24px;
+    font-family: darkGrotBold;
+}
+
+.lib2 {
+    font-size: 10px;
+    height: 2px;
+    font-family: darkGrotMed;
+}
+
+.highlight{
+    color:#37bcda
+}
+
+.navBar{
+    position: absolute;
+    left: 5%;
+    right: 5%;
+    top: 2%;
+}
+
+.navbar .right{
+    width: 100px;
+    text-align: center;
+}
+
+.left{
+    float: left;
+    padding: 10px;
+}
+
+.right{
+    float: right;
+    padding: 10px;
+}
+
+.footer{
+    position: absolute;
+    right: 5%;
+    bottom: 2%;
+}
+
+.footer img{
+    margin-left: 75px;
+}
+
+.title{
+    position: absolute;
+    top: 55%;
+    left: 10%;
+}
+
+.titleButton{
+    font-style: montReg;
+    font-size: 17px;
+    border: 1px solid;
+    padding: 5 15 10 15;
+}
+
+.titleButtonSpec{
+    position: relative;
+    font-style: montReg;
+    font-size: 17px;
+    border: 1px solid;
+    padding: 5 15 10 15;
+    background-color: #1d2025;
+    margin: 0 0 0 0;
+}
+
+.titleButtonShadow{
+    position: relative;
+    top: 3;
+    left: 4;
+    font-style: montReg;
+    font-size: 17px;
+    border: 1px solid;
+    padding: 5 15 10 15;
+    background-color: #e5f5f8;
+    color: #e5f5f8;
+    margin: 0 0 0 0;
+}
+
+.scrollNotice{
+    display: flex;
+    justify-content: center;
+}
+
+.scrollNoticeContainer{
+    position: absolute;
+    left: 8px;
+    right: 8px;
+    bottom: 56px;
+}
+
+.lifeBeyondText{
+    float: left;
+    width: 25%;
+    margin-left: 5%;
+}
+
+.lifeBeyondWrapper{
+    height: 600px;
+    background-color: #1d2025;
+}
+
+.lifeBeyondImages{
+    width: 59%; 
+    float: right; 
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.lifeBeyondImages div{
+    width: 250px;
+    height: 125px;
+    margin-top: auto;
+}
+
+.amalgDesc {
+    width: 33%;
+    float: right;
+}
+
+.amalgDescSpacer {
+    width: 66%;
+    float: left;
+}
+
+.amalgDescContainer {
+    height: 500px;
+    width: 100%;
+}
+
+.amalgRow{
+    display: flex;
+    flex-direction: row;
+    height: 600px;
+    margin-bottom: 100px;
+}
+
+.amalgRowEndSpacer{
+    width: 5%;
+}
+
+.amalgRowMidSpacer{
+    width: 10%;
+}
+
+.amalgRowContent{
+    width: 23%;
+    background-color: #1d2025;
+}
+
+.amalgRowContentImage{
+    height: 250px;
+}
+
+.amalgRowContentText {
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.logos{
+    display: flex;
+    justify-content: center;
+    height: 50px;
+    flex-direction: column;
+}
+
+.logos div{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.logos div img{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.logosContainer{
+    padding-top: 150px;
+    left: 8px;
+    right: 8px;
+    height: 400px;
+}
+
+.subPageBottom{
+    height: 300px;
+    left: 0px;
+    right: 0px;
+    text-align: center;
+    background-color: #1d2025;
+}
+
+.subPageShortDesc{
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-bottom: 10%;
+}
+
+.musicRowContainer{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: 150px;
+}
+
+.musicRowSpacer{
+    width: 15%;
+}
+
+.musicRow{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+
+.trackList{
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+}
+
+.track{
+    width: 20%;
+    background-color: #1d2025;
+    height: 60px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+}
+.trackSpacer{
+    width: 5%;
+}
+
+.trackInfo{
+    margin-top: 5%;
+    width: 60%;
+}
+
+.trackPlayWrapper{
+    width: 22%;
+    position: relative;
+    border-right: 1px solid white;
+    margin-right: 3%;
+}
+
+.trackPlayWrapper img{
+    position: absolute;
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 60%;
+}
+
+.trackDownload{
+    margin-top: 5%;
+    margin-right: 5%;
+}
+
+.loadMoreContainer{
+    margin-top: 30px;
+}
+
+.loadMoreContainer hr{
+    width: 100%;
+}
+
+.loadMoreContainer .titleButton{
+    float: right;
+    margin-bottom: 10px;
+}
+
+.recentAlbums{
+    background-color: #1d2025;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 200px;
+    display: flex;
+    flex-direction: row;
+}
+
+.recentAlbumsDesc{
+    margin-top: 100px;
+    width: 40%;
+    float: right;
+}
+
+.albumSpacer{
+    width: 10%;
+}
+
+.albumImages{
+    margin-top: 100px;
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+.albumImages div{
+    display: flex;
+    flex-direction: row;
+}
+
+.albumImages div img{
+    margin-left: 50px;
+    margin-bottom: 25px;
+}
+
+.shopGrid{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10%;
+    margin-bottom: 200px;
+}
+
+.shopGrid > div{
+    display: flex;
+    flex-direction: row;
+}
+
+.shopItem{
+    width: 42%;
+    margin-bottom: 50px;
+    background-color: #1d2025;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.shopSpacer{
+    width: 6%;
+}
+
+.shopItemDesc{
+    float: right;
+    width: 50%;
+}
+
+.shopItem img{
+    margin-left: 10%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.aboutDesc {
+    margin-top: 50px;
+    margin-left: 10%;
+    width: 40%;
+    margin-right: 5%;
+}
+
+.contactForm {
+    width: 30%;
+    margin-right: 15%; 
+    margin-top: -5%;
+    background-color: #1d2025;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 100px;
+}
+
+.bottomContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.contactFormDesc{
+    margin-top: 5%;
+    margin-left: 10%;
+    margin-bottom: 30px;
+}
+
+.contactInputBox{
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: row;
+    margin-right: 10%;
+    padding: 0 0 0 0;
+}
+
+.contactInputBox span{
+    height: 30px;
+    border: 1px solid #6b6f72;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.contactInput{
+    height: 30px;
+    border: 1px solid #6b6f72;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 100%;
+}
+
+.messageBox {
+    width: 100%;
+    border: 1px solid #6b6f72;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    height: 100px;
+}
+
+.submitWrapper {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.titleButtonShadowSubmit{
+    position: relative;
+    top: 3;
+    left: 37;
+    font-style: montReg;
+    font-size: 17px;
+    border: 1px solid;
+    padding: 5 15 10 15;
+    background-color: #e5f5f8;
+    color: #e5f5f8;
+    margin: 0 0 0 0;
+}
+
+.hiddenAtStart{
+    display: none;
+}
+
+iframe{
+    border: 0px;
+}
+
+.scrollWrapper{
+    scroll-snap-type: y;
+    scroll-snap-stop: normal;
+}
+
+.scrollWrapper iframe{
+    scroll-snap-align: start;
+}
+
+body{
+    margin: 0 0 0 0;
+}
+
+.aboutPageHTML {
+    background-image: url(assets/AboutPageBackground/aboutBG.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.aboutPageBody {
+    background-image: url(assets/AboutPageBackground/properPlanet.png);
+    background-position: right;
+}
+
+.aboutPageHTML {
+    background-image: url(assets/AboutPageBackground/aboutBG.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.aboutPageBody {
+    background-image: url(assets/AboutPageBackground/properPlanet.png);
+    background-size: 90%;
+    background-repeat: no-repeat;
+    background-position: top -50px right 0px;
+    transition: background-position 0.25s;
+}
+
+.shopPageHTML {
+    background-image: url(assets/ShopPageBackground/shopBG.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.shopPageBody {
+    background-image: 
+        url(assets/ShopPageBackground/shopPlanet1.png), 
+        url(assets/ShopPageBackground/shopPlanet2.png);
+    background-size: 20%, 30%;
+    background-repeat: no-repeat;
+    background-position: bottom 80px left 520px, right 50px top 25px;
+    transition: background-position 0.25s;
+}

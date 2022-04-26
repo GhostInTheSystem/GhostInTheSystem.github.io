@@ -1,0 +1,71 @@
+<html class="scrollWrapper">
+    <head>
+        <link rel="stylesheet" href="general.css">
+        <script src="assets/script.js"></script>
+        <script src="assets/jquery-3.6.0.js"></script>
+        <script>
+            window.addEventListener('message', function(e) {
+                var eventName = e.data[0];
+                var data = e.data[1];
+                switch(eventName){
+                    case 'setHeightProject':
+                        var $iframe = jQuery("#projectSubPage");
+                        $iframe.height(data);
+                        break;
+                    case 'loadProject':
+                        document.getElementById('projectSubPage').style.display = "block";
+                        document.getElementById('projectSubPage').contentWindow.postMessage("message", "*");
+                        setTimeout(function(){
+                            window.scrollBy(0, 100)
+                        }, 500)
+                        break;
+                    case 'setHeightMusic':
+                        scrollBefore = window.scrollY;
+                        var $iframe = jQuery("#musicSubPage");
+                        $iframe.height(data);
+                        scrollAfter = window.scrollY;
+                        window.scrollBy(0, scrollBefore-scrollAfter)
+                        break;
+                    case 'loadMusic':
+                        document.getElementById('musicSubPage').style.display = "block";
+                        document.getElementById('musicSubPage').contentWindow.postMessage("message", "*");
+                        setTimeout(function(){
+                            window.scrollBy(0, 100)
+                        }, 500)
+                        break;
+                    case 'setHeightShop':
+                        var $iframe = jQuery("#shopSubPage");
+                        $iframe.height(data);
+                        break;
+                    case 'loadShop':
+                        document.getElementById('shopSubPage').style.display = "block";
+                        document.getElementById('shopSubPage').contentWindow.postMessage("message", "*");
+                        setTimeout(function(){
+                            window.scrollBy(0, 100)
+                        }, 500)
+                        break;
+                    case 'setHeightAbout':
+                        var $iframe = jQuery("#aboutSubPage");
+                        $iframe.height(data);
+                        break;
+                    case 'loadAbout':
+                        document.getElementById('aboutSubPage').style.display = "block";
+                        document.getElementById('aboutSubPage').contentWindow.postMessage("message", "*");
+                        setTimeout(function(){
+                            window.scrollBy(0, 100)
+                        }, 500)
+                        break;
+                }
+            }, false)
+        </script>
+    </head>
+    <iframe src="index.html" title="index" height="100%" width="100%"></iframe>
+    <iframe src="projects.html" title="projects" height="100%" width="100%"></iframe>
+    <iframe src="projectSubPage.html" id="projectSubPage" class="hiddenAtStart" title="projectSubPage" height="100%" width="100%"></iframe>
+    <iframe src="music.html" title="music" height="100%" width="100%"></iframe>
+    <iframe src="musicSubPage.html" id="musicSubPage" class="hiddenAtStart" title="musicSubPage" height="100%" width="100%"></iframe>
+    <iframe src="shop.html" title="shop" height="100%" width="100%"></iframe>
+    <iframe src="shopSubPage.html" id="shopSubPage" class="hiddenAtStart" title="shopSubPage" height="100%" width="100%"></iframe>
+    <iframe src="about.html" title="about" height="100%" width="100%"></iframe>
+    <iframe src="aboutSubPage.html" id="aboutSubPage" class="hiddenAtStart" title="aboutSubPage" height="100%" width="100%"></iframe>
+</html>

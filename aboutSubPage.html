@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="general.css">
+        <script src="assets/script.js"></script>
+        <script>
+            window.addEventListener('message', function(e) {
+                resize('About')
+            }, false)
+        </script>
+    </head>
+    <body onload="resize('About')">
+        <img src="assets/Sheepy.jpeg" style="margin-left: 10%" width="80%">
+        <div class="bottomContainer">
+            <div class="aboutDesc">
+                <span class="head3">
+                    John D. <span class="highlight">Boswell</span>
+                    <br>
+                    <br>
+                </span>
+                <br>
+                <span class="pStyle">
+                    Filmmaker, composer, VFX artist, and editor from the Pacific Northwest. His work<br>
+                    spans from television and music production to viral remixes and mashups, and has<br>
+                    drawn over a quarter billion views online<br>
+                    <br>
+                    In 2017, MelodySheep created the 8 part series ORIGINS for National Geographic,<br>
+                    and has done extensive work with Disney, PBS, and many other collaborators. A TED<br>
+                    guest and multiple Webby Award winner, he strives to evoke a sense of awe with his<br>
+                    work by celebrating the musicality of life, nature and pop culture.
+                </span>
+            </div>
+            <div class="contactForm">
+                <div class="contactFormDesc">
+                    <span class="head3">
+                        Contact Form
+                        <br>
+                    </span>
+                    <br>
+                    <span class="pStyle">
+                        Feel free to contact me if you're interested in collaborating together.
+                    </span>
+                </div>
+                <div class="contactInputBox">
+                    <span class="head2">Name</span>
+                    <div contenteditable="true" class="head2 contactInput"></div>
+                </div>
+                <div class="contactInputBox">
+                    <span class="head2">Email&nbsp;</span>
+                    <div contenteditable="true" class="head2 contactInput"></div>
+                </div>
+                <div class="contactInputBox">
+                    <div contenteditable="true" class="pStyle messageBox">Message</div>
+                </div>
+                <div class="submitWrapper">
+                    <a class="titleButtonShadowSubmit" href="projectSubPage.html">Send</a>
+                    <a class="titleButtonSpec" href="projectSubPage.html" style="left:-36">Send</a>
+                </div>
+            </div>
+        </div>
+        <div class="subPageBottom">
+            <div style="height:100px"></div>
+            <img src="assets/melodySheep_icon.png" height="100"></img>
+        </div>
+    </body>
+</html>
