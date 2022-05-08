@@ -7,6 +7,10 @@
         <script>
             var container = document.querySelector("#aboutPageHTML");
             var mover = document.querySelector("#aboutPageBody");
+            window.addEventListener('message', function(e) {
+                mover.style.backgroundPositionX = "180px" ;
+                mover.style.backgroundPositionY = "-60px";
+            }, false)
 
             container.addEventListener("mousemove", function(e) {
                 mover.style.backgroundPositionX = 180 + e.offsetX * .02 + "px";

@@ -5,6 +5,10 @@
     </head>
     <body class="projectPageBody" id="projectPageBody">
         <script>
+            window.addEventListener('message', function(e) {
+                mover.style.backgroundPositionX = "0px, 0px, 1450px, 525px, 1500px, 250px" ;
+                mover.style.backgroundPositionY = "58px, 58px, 100px, 700px, 500px, 50px";
+            }, false)
             var container = document.querySelector("#projectPageHTML");
             var mover = document.querySelector("#projectPageBody");
             container.addEventListener("mousemove", function(e) {

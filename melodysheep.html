@@ -16,7 +16,8 @@
                         document.getElementById('projectSubPage').style.display = "block";
                         document.getElementById('projectSubPage').contentWindow.postMessage("message", "*");
                         setTimeout(function(){
-                            window.scrollBy(0, 100)
+                            var $iframe = jQuery("#projects");
+                            window.scrollBy({top: $iframe.height(), left: 0, behavior: "smooth"});
                         }, 1000)
                         break;
                     case 'setHeightMusicSubPage':
@@ -30,8 +31,9 @@
                         document.getElementById('musicSubPage').style.display = "block";
                         document.getElementById('musicSubPage').contentWindow.postMessage("message", "*");
                         setTimeout(function(){
-                            window.scrollBy(0, 100)
-                        }, 500)
+                            var $iframe = jQuery("#music");
+                            window.scrollBy({top: $iframe.height(), left: 0, behavior: "smooth"});
+                        }, 1000)
                         break;
                     case 'setHeightShopSubPage':
                         var $iframe = jQuery("#shopSubPage");
@@ -41,8 +43,9 @@
                         document.getElementById('shopSubPage').style.display = "block";
                         document.getElementById('shopSubPage').contentWindow.postMessage("message", "*");
                         setTimeout(function(){
-                            window.scrollBy(0, 100)
-                        }, 500)
+                            var $iframe = jQuery("#shop");
+                            window.scrollBy({top: $iframe.height(), left: 0, behavior: "smooth"});
+                        }, 1000)
                         break;
                     case 'setHeightAboutSubPage':
                         var $iframe = jQuery("#aboutSubPage");
@@ -52,63 +55,93 @@
                         document.getElementById('aboutSubPage').style.display = "block";
                         document.getElementById('aboutSubPage').contentWindow.postMessage("message", "*");
                         setTimeout(function(){
-                            window.scrollBy(0, 100)
-                        }, 500)
+                            var $iframe = jQuery("#about");
+                            window.scrollBy({top: $iframe.height(), left: 0, behavior: "smooth"});
+                        }, 1000)
                         break;
                     case 'loadIndex':
-                        document.getElementById('index').style.display = "block";
+                        setTimeout(function(){
+                            document.getElementById('index').style.display = "block";
+                        }, 1500)
                         break;
                     case 'unloadIndex':
-                        document.getElementById('index').style.display = "none";
-                        document.getElementById('indexVid').style.display = "block";
-                        document.getElementById('indexVid').contentWindow.postMessage("message", "*");
+                        document.getElementById('index').contentWindow.postMessage("message", "*");
                         setTimeout(function(){
-                            document.getElementById('indexVid').style.display = "none";
-                        }, 800)
+                            document.getElementById('index').style.display = "none";
+                            document.getElementById('indexVid').style.display = "block";
+                            document.getElementById('indexVid').contentWindow.postMessage("message", "*");
+                            setTimeout(function(){
+                                document.getElementById('indexVid').style.display = "none";
+                            }, 1000)
+                        }, 500)
                         break;
                     case 'loadProjects':
-                        document.getElementById('projects').style.display = "block";
+                        setTimeout(function(){
+                            document.getElementById('projects').style.display = "block";
+                        }, 1500)
                         break;
                     case 'unloadProjects':
-                        document.getElementById('projects').style.display = "none";
-                        document.getElementById('projectsVid').style.display = "block";
-                        document.getElementById('projectsVid').contentWindow.postMessage("message", "*");
+                        document.getElementById('projects').contentWindow.postMessage("message", "*");
+                        document.getElementById('projectSubPage').style.display = "none";
                         setTimeout(function(){
-                            document.getElementById('projectsVid').style.display = "none";
-                        }, 800)
+                            document.getElementById('projects').style.display = "none";
+                            document.getElementById('projectsVid').style.display = "block";
+                            document.getElementById('projectsVid').contentWindow.postMessage("message", "*");
+                            setTimeout(function(){
+                                document.getElementById('projectsVid').style.display = "none";
+                            }, 1000)
+                        }, 500)
                         break;
                     case 'loadMusic':
-                        document.getElementById('music').style.display = "block";
+                        setTimeout(function(){
+                            document.getElementById('music').style.display = "block";
+                        }, 1500)
                         break;
                     case 'unloadMusic':
-                        document.getElementById('music').style.display = "none";
-                        document.getElementById('musicVid').style.display = "block";
-                        document.getElementById('musicVid').contentWindow.postMessage("message", "*");
+                        document.getElementById('music').contentWindow.postMessage("message", "*");
+                        document.getElementById('musicSubPage').style.display = "none";
                         setTimeout(function(){
-                            document.getElementById('musicVid').style.display = "none";
-                        }, 800)
+                            document.getElementById('music').style.display = "none";
+                            document.getElementById('musicVid').style.display = "block";
+                            document.getElementById('musicVid').contentWindow.postMessage("message", "*");
+                            setTimeout(function(){
+                                document.getElementById('musicVid').style.display = "none";
+                            }, 1000)
+                        }, 500)
                         break;
                     case 'loadShop':
-                        document.getElementById('shop').style.display = "block";
+                        setTimeout(function(){
+                            document.getElementById('shop').style.display = "block";
+                        }, 1500)
                         break;
                     case 'unloadShop':
-                        document.getElementById('shop').style.display = "none";
-                        document.getElementById('shopVid').style.display = "block";
-                        document.getElementById('shopVid').contentWindow.postMessage("message", "*");
+                        document.getElementById('shop').contentWindow.postMessage("message", "*");
+                        document.getElementById('shopSubPage').style.display = "none";
                         setTimeout(function(){
-                            document.getElementById('shopVid').style.display = "none";
-                        }, 800)
+                            document.getElementById('shop').style.display = "none";
+                            document.getElementById('shopVid').style.display = "block";
+                            document.getElementById('shopVid').contentWindow.postMessage("message", "*");
+                            setTimeout(function(){
+                                document.getElementById('shopVid').style.display = "none";
+                            }, 1000)
+                        }, 500)
                         break;
                     case 'loadAbout':
-                        document.getElementById('about').style.display = "block";
+                        setTimeout(function(){
+                            document.getElementById('about').style.display = "block";
+                        }, 1500)
                         break;
                     case 'unloadAbout':
-                        document.getElementById('about').style.display = "none";
-                        document.getElementById('aboutVid').style.display = "block";
-                        document.getElementById('aboutVid').contentWindow.postMessage("message", "*");
+                        document.getElementById('about').contentWindow.postMessage("message", "*");
+                        document.getElementById('aboutSubPage').style.display = "none";
                         setTimeout(function(){
-                            document.getElementById('aboutVid').style.display = "none";
-                        }, 800)
+                            document.getElementById('about').style.display = "none";
+                            document.getElementById('aboutVid').style.display = "block";
+                            document.getElementById('aboutVid').contentWindow.postMessage("message", "*");
+                            setTimeout(function(){
+                                document.getElementById('aboutVid').style.display = "none";
+                            }, 1000)
+                        }, 500)
                         break;
                 }
             }, false)

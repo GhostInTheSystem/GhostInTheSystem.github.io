@@ -121,6 +121,7 @@ a {
     font-size: 17px;
     border: 1px solid;
     padding: 5 15 10 15;
+    cursor:pointer;
 }
 
 .titleButtonSpec{
@@ -131,6 +132,7 @@ a {
     padding: 5 15 10 15;
     background-color: #1d2025;
     margin: 0 0 0 0;
+    cursor:pointer;
 }
 
 .titleButtonShadow{
@@ -144,6 +146,7 @@ a {
     background-color: #e5f5f8;
     color: #e5f5f8;
     margin: 0 0 0 0;
+    cursor:pointer;
 }
 
 .scrollNotice{

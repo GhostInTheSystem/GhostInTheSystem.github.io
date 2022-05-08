@@ -5,6 +5,10 @@
     </head>
     <body class="musicPageBody" id="musicPageBody">
         <script>
+            window.addEventListener('message', function(e) {
+                mover.style.backgroundPositionX = "1200px, 200px" ;
+                mover.style.backgroundPositionY = "150px, 150px";
+            }, false)
             var container = document.querySelector("#musicPageHTML");
             var mover = document.querySelector("#musicPageBody");
             container.addEventListener("mousemove", function(e) {

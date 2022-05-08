@@ -5,6 +5,10 @@
     </head>
     <body class="shopPageBody" id="shopPageBody">
         <script>
+            window.addEventListener('message', function(e) {
+                mover.style.backgroundPositionX = "500px, 1250px" ;
+                mover.style.backgroundPositionY = "500px, 0px";
+            }, false)
             var container = document.querySelector("#shopPageHTML");
             var mover = document.querySelector("#shopPageBody");
 
