@@ -4,8 +4,6 @@ let preAtmos = 0;
 let postAtmos = 0;
 let preElec = 0;
 let postElec = 0;
-let preRPJ = 0;
-let postRPJ = 0;
 
 function hideCinematic(){
     document.getElementById('extendedListCinematic1').style.display = "none";
@@ -19,7 +17,7 @@ function hideCinematic(){
 
     document.getElementById('loadMoreCinematic').style.display = "block";
 
-    resize('Music', false, postCin-preCin);
+    resize('MusicSubPage', false, postCin-preCin);
 }
 
 function showCinematic(){
@@ -36,7 +34,7 @@ function showCinematic(){
     document.getElementById('loadMoreCinematic').style.display = "none";
 
     postCin = document.getElementsByTagName("html")[0].scrollHeight;
-    resize('Music', false);
+    resize('MusicSubPage', false);
 }
 
 function hideAtmos(){
@@ -48,7 +46,7 @@ function hideAtmos(){
 
     document.getElementById('loadMoreAtmos').style.display = "block";
 
-    resize('Music', false, postAtmos-preAtmos);
+    resize('MusicSubPage', false, postAtmos-preAtmos);
 }
 
 function showAtmos(){
@@ -62,7 +60,7 @@ function showAtmos(){
     document.getElementById('loadMoreAtmos').style.display = "none";
 
     postAtmos = document.getElementsByTagName("html")[0].scrollHeight;
-    resize('Music', false);
+    resize('MusicSubPage', false);
 }
 
 function hideElec(){
@@ -71,7 +69,7 @@ function hideElec(){
 
     document.getElementById('loadMoreElec').style.display = "block";
 
-    resize('Music', false, postElec-preElec);
+    resize('MusicSubPage', false, postElec-preElec);
 }
 
 function showElec(){
@@ -82,32 +80,12 @@ function showElec(){
     document.getElementById('loadMoreElec').style.display = "none";
 
     postElec = document.getElementsByTagName("html")[0].scrollHeight;
-    resize('Music', false);
-}
-
-function hideRPJ(){
-    document.getElementById('extendedListRPJ1').style.display = "none";
-    document.getElementById('extendedListRPJ2').style.display = "none";
-
-    document.getElementById('loadMoreRPJ').style.display = "block";
-
-    resize('Music', false, postRPJ-preRPJ);
-}
-
-function showRPJ(){
-    preRPJ = document.getElementsByTagName("html")[0].scrollHeight;
-    document.getElementById('extendedListRPJ1').style.display = "flex";
-    document.getElementById('extendedListRPJ2').style.display = "block";
-
-    document.getElementById('loadMoreRPJ').style.display = "none";
-
-    postRPJ = document.getElementsByTagName("html")[0].scrollHeight;
-    resize('Music', false);
+    resize('MusicSubPage', false);
 }
 
 function resize(pageName, grow=true, reduce=0){
     var height = document.getElementsByTagName("html")[0].scrollHeight;
-    if(grow && (pageName=='Music' || pageName=='Shop' || pageName=='About')){
+    if(grow && (pageName=='MusicSubPage' || pageName=='ShopSubPage' || pageName=='AboutSubPage')){
         height += 20;
     }
     height -= reduce;
@@ -117,5 +95,10 @@ function resize(pageName, grow=true, reduce=0){
 
 function loadPage(pageName){
     var messageText = "load" + pageName;
+    parent.postMessage([messageText, 0], "*");
+}
+
+function unloadPage(pageName){
+    var messageText = "unload" + pageName;
     parent.postMessage([messageText, 0], "*");
 }

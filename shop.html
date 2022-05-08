@@ -32,11 +32,11 @@
                 <img src="assets/melodySheep_icon.png" height="20"></img>
                 <span>&nbsp;&nbsp;&nbsp;MELODYSHEEP</span>
             </span>
-            <a class="right" href="about.html">ABOUT</a>
-            <a class="right" href="shop.html">SHOP</a>
-            <a class="right" href="music.html">MUSIC</a>
-            <a class="right" href="projects.html">PROJECTS</a>
-            <a class="right" href="index.html">HOME</a>
+            <a class="right" onclick="unloadPage('Shop');loadPage('About');">ABOUT</a>
+            <a class="right" href="#">SHOP</a>
+            <a class="right" onclick="unloadPage('Shop');loadPage('Music');">MUSIC</a>
+            <a class="right" onclick="unloadPage('Shop');loadPage('Projects');">PROJECTS</a>
+            <a class="right" onclick="unloadPage('Shop');loadPage('Index');">HOME</a>
         </div>
         <div class="title">
             <span class="head1">
@@ -49,14 +49,12 @@
             </span>
             <br>
             <br>
-            <a class="titleButton" onclick="loadPage('Shop')">
+            <a class="titleButton" onclick="loadPage('ShopSubPage')">
                 Learn more
             </a>
         </div>
         <div class="scrollNoticeContainer">
-            <div class="scrollNotice head2">
-                <span>SCROLL TO CONTINUE</span>
-            </div>
+            <a class="titleButton head2"  onclick="unloadPage('Shop');loadPage('About');">CONTINUE</a>
         </div>
         <div class="footer">
             <img src="assets/youtube_icon.png" height="20"></img>

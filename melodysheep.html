@@ -8,64 +8,124 @@
                 var eventName = e.data[0];
                 var data = e.data[1];
                 switch(eventName){
-                    case 'setHeightProject':
+                    case 'setHeightProjectSubPage':
                         var $iframe = jQuery("#projectSubPage");
                         $iframe.height(data);
                         break;
-                    case 'loadProject':
+                    case 'loadProjectSubPage':
                         document.getElementById('projectSubPage').style.display = "block";
                         document.getElementById('projectSubPage').contentWindow.postMessage("message", "*");
                         setTimeout(function(){
                             window.scrollBy(0, 100)
-                        }, 500)
+                        }, 1000)
                         break;
-                    case 'setHeightMusic':
+                    case 'setHeightMusicSubPage':
                         scrollBefore = window.scrollY;
                         var $iframe = jQuery("#musicSubPage");
                         $iframe.height(data);
                         scrollAfter = window.scrollY;
                         window.scrollBy(0, scrollBefore-scrollAfter)
                         break;
-                    case 'loadMusic':
+                    case 'loadMusicSubPage':
                         document.getElementById('musicSubPage').style.display = "block";
                         document.getElementById('musicSubPage').contentWindow.postMessage("message", "*");
                         setTimeout(function(){
                             window.scrollBy(0, 100)
                         }, 500)
                         break;
-                    case 'setHeightShop':
+                    case 'setHeightShopSubPage':
                         var $iframe = jQuery("#shopSubPage");
                         $iframe.height(data);
                         break;
-                    case 'loadShop':
+                    case 'loadShopSubPage':
                         document.getElementById('shopSubPage').style.display = "block";
                         document.getElementById('shopSubPage').contentWindow.postMessage("message", "*");
                         setTimeout(function(){
                             window.scrollBy(0, 100)
                         }, 500)
                         break;
-                    case 'setHeightAbout':
+                    case 'setHeightAboutSubPage':
                         var $iframe = jQuery("#aboutSubPage");
                         $iframe.height(data);
                         break;
-                    case 'loadAbout':
+                    case 'loadAboutSubPage':
                         document.getElementById('aboutSubPage').style.display = "block";
                         document.getElementById('aboutSubPage').contentWindow.postMessage("message", "*");
                         setTimeout(function(){
                             window.scrollBy(0, 100)
                         }, 500)
                         break;
+                    case 'loadIndex':
+                        document.getElementById('index').style.display = "block";
+                        break;
+                    case 'unloadIndex':
+                        document.getElementById('index').style.display = "none";
+                        document.getElementById('indexVid').style.display = "block";
+                        document.getElementById('indexVid').contentWindow.postMessage("message", "*");
+                        setTimeout(function(){
+                            document.getElementById('indexVid').style.display = "none";
+                        }, 800)
+                        break;
+                    case 'loadProjects':
+                        document.getElementById('projects').style.display = "block";
+                        break;
+                    case 'unloadProjects':
+                        document.getElementById('projects').style.display = "none";
+                        document.getElementById('projectsVid').style.display = "block";
+                        document.getElementById('projectsVid').contentWindow.postMessage("message", "*");
+                        setTimeout(function(){
+                            document.getElementById('projectsVid').style.display = "none";
+                        }, 800)
+                        break;
+                    case 'loadMusic':
+                        document.getElementById('music').style.display = "block";
+                        break;
+                    case 'unloadMusic':
+                        document.getElementById('music').style.display = "none";
+                        document.getElementById('musicVid').style.display = "block";
+                        document.getElementById('musicVid').contentWindow.postMessage("message", "*");
+                        setTimeout(function(){
+                            document.getElementById('musicVid').style.display = "none";
+                        }, 800)
+                        break;
+                    case 'loadShop':
+                        document.getElementById('shop').style.display = "block";
+                        break;
+                    case 'unloadShop':
+                        document.getElementById('shop').style.display = "none";
+                        document.getElementById('shopVid').style.display = "block";
+                        document.getElementById('shopVid').contentWindow.postMessage("message", "*");
+                        setTimeout(function(){
+                            document.getElementById('shopVid').style.display = "none";
+                        }, 800)
+                        break;
+                    case 'loadAbout':
+                        document.getElementById('about').style.display = "block";
+                        break;
+                    case 'unloadAbout':
+                        document.getElementById('about').style.display = "none";
+                        document.getElementById('aboutVid').style.display = "block";
+                        document.getElementById('aboutVid').contentWindow.postMessage("message", "*");
+                        setTimeout(function(){
+                            document.getElementById('aboutVid').style.display = "none";
+                        }, 800)
+                        break;
                 }
             }, false)
         </script>
     </head>
-    <iframe src="index.html" title="index" height="100%" width="100%"></iframe>
-    <iframe src="projects.html" title="projects" height="100%" width="100%"></iframe>
+    <iframe src="indexVid.html" id="indexVid" title="indexVid" class="hiddenAtStart" height="100%" width="100%"></iframe>
+    <iframe src="projectVid.html" id="projectsVid" title="projectsVid" class="hiddenAtStart" height="100%" width="100%"></iframe>
+    <iframe src="musicVid.html" id="musicVid" title="musicVid" class="hiddenAtStart" height="100%" width="100%"></iframe>
+    <iframe src="shopVid.html" id="shopVid" title="shopVid" class="hiddenAtStart" height="100%" width="100%"></iframe>
+    <iframe src="aboutVid.html" id="aboutVid" title="aboutVid" class="hiddenAtStart" height="100%" width="100%"></iframe>
+    <iframe src="index.html" id="index" title="index" height="100%" width="100%"></iframe>
+    <iframe src="projects.html" id="projects" title="projects" class="hiddenAtStart" height="100%" width="100%"></iframe>
     <iframe src="projectSubPage.html" id="projectSubPage" class="hiddenAtStart" title="projectSubPage" height="100%" width="100%"></iframe>
-    <iframe src="music.html" title="music" height="100%" width="100%"></iframe>
+    <iframe src="music.html" id="music" title="music" height="100%"  class="hiddenAtStart" width="100%"></iframe>
     <iframe src="musicSubPage.html" id="musicSubPage" class="hiddenAtStart" title="musicSubPage" height="100%" width="100%"></iframe>
-    <iframe src="shop.html" title="shop" height="100%" width="100%"></iframe>
+    <iframe src="shop.html" id="shop" title="shop" height="100%"  class="hiddenAtStart" width="100%"></iframe>
     <iframe src="shopSubPage.html" id="shopSubPage" class="hiddenAtStart" title="shopSubPage" height="100%" width="100%"></iframe>
-    <iframe src="about.html" title="about" height="100%" width="100%"></iframe>
+    <iframe src="about.html" id="about" title="about" height="100%"  class="hiddenAtStart" width="100%"></iframe>
     <iframe src="aboutSubPage.html" id="aboutSubPage" class="hiddenAtStart" title="aboutSubPage" height="100%" width="100%"></iframe>
 </html>

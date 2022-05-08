@@ -155,7 +155,8 @@ a {
     position: absolute;
     left: 8px;
     right: 8px;
-    bottom: 56px;
+    bottom: 90px;
+    text-align: center;
 }
 
 .lifeBeyondText{
@@ -509,6 +510,7 @@ iframe{
 .scrollWrapper{
     scroll-snap-type: y;
     scroll-snap-stop: normal;
+    background-color: #ffffff;
 }
 
 .scrollWrapper iframe{
@@ -520,24 +522,24 @@ body{
 }
 
 .aboutPageHTML {
-    background-image: url(assets/AboutPageBackground/aboutBG.png);
+    background-image: url(./assets/AboutPageBackground/aboutBG.png);
     background-size: cover;
     background-position: center;
 }
 
 .aboutPageBody {
-    background-image: url(assets/AboutPageBackground/properPlanet.png);
+    background-image: url(./assets/AboutPageBackground/properPlanet.png);
     background-position: right;
 }
 
 .aboutPageHTML {
-    background-image: url(assets/AboutPageBackground/aboutBG.png);
+    background-image: url(./assets/AboutPageBackground/aboutBG.png);
     background-size: cover;
     background-position: center;
 }
 
 .aboutPageBody {
-    background-image: url(assets/AboutPageBackground/properPlanet.png);
+    background-image: url(./assets/AboutPageBackground/properPlanet.png);
     background-size: 90%;
     background-repeat: no-repeat;
     background-position: top -50px right 0px;
@@ -545,17 +547,80 @@ body{
 }
 
 .shopPageHTML {
-    background-image: url(assets/ShopPageBackground/shopBG.png);
+    background-image: url(./assets/ShopPageBackground/shopBG.png);
     background-size: cover;
     background-position: center;
 }
 
 .shopPageBody {
     background-image: 
-        url(assets/ShopPageBackground/shopPlanet1.png), 
-        url(assets/ShopPageBackground/shopPlanet2.png);
+        url(./assets/ShopPageBackground/shopPlanet1.png), 
+        url(./assets/ShopPageBackground/shopPlanet2.png);
     background-size: 20%, 30%;
     background-repeat: no-repeat;
     background-position: bottom 80px left 520px, right 50px top 25px;
     transition: background-position 0.25s;
+}
+
+.indexPageHTML {
+    background-image: url(./assets/IndexBackground/milkyWay1.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.indexPageBody {
+    background-image: 
+        url(./assets/IndexBackground/milkyWay3.png),
+        url(./assets/IndexBackground/milkyWay2.png),
+        url(./assets/IndexBackground/papaBear.png),
+        url(./assets/IndexBackground/mamaBear.png),
+        url(./assets/IndexBackground/babyBear.png);
+    background-size: 100%, 100%, 25%, 15%, 5%;
+    background-repeat: no-repeat;
+    background-position: top 245px left 0px, top 120px left 0px, top 375px left 1150px, top 200px left 350px, top 150px left 1000px;
+    transition: background-position 0.25s;
+}
+
+.projectPageHTML {
+    background-image:
+        url(./assets/ProjectBackground/projectPage.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+
+.projectPageBody {
+    background-image: 
+        url(./assets/ProjectBackground/creation1.png),
+        url(./assets/ProjectBackground/Creation_of2.png),
+        url(./assets/ProjectBackground/rockOne.png),
+        url(./assets/ProjectBackground/rockTwo.png),
+        url(./assets/ProjectBackground/rockThree.png),
+        url(./assets/ProjectBackground/rockFour.png);
+    background-size: 100%, 100%, 10%, 15%, 18%, 22%;
+    background-repeat: no-repeat;
+    background-position: bottom, bottom, top 100px left 1450px, top 700px left 525px, top 400px left 1500px, top 50px left 250px;
+    transition: background-position 0.25s;
+}
+
+.musicPageHTML {
+    background-image:
+        url(./assets/MusicBackground/musicBG.png);
+    background-size: cover;
+    background-position: center;
+}
+
+
+.musicPageBody {
+    background-image: 
+        url(./assets/MusicBackground/musicPlanet1.png),
+        url(./assets/MusicBackground/musicPlanet2.png);
+    background-size: 10%, 35%;
+    background-repeat: no-repeat;
+    background-position: top 150px left 1200px, top 150px left 200px;
+    transition: background-position 0.25s;
+}
+
+.navbar a{
+    cursor:pointer;
 }

@@ -1,19 +1,45 @@
-<html style="background-image: urL(assets/ProjectsPageBackground.png);">
+<html class="projectPageHTML" id="projectPageHTML">
     <head>
         <link rel="stylesheet" href="general.css">
         <script src="assets/script.js"></script>
     </head>
-    <body>
+    <body class="projectPageBody" id="projectPageBody">
+        <script>
+            var container = document.querySelector("#projectPageHTML");
+            var mover = document.querySelector("#projectPageBody");
+            container.addEventListener("mousemove", function(e) {
+                firstPlantBgPosX = 1450 + -e.offsetX * .05 + "px"
+                firstPlantBgPosY = 100 + -e.offsetY * .05 + "px"
+                secPlantBgPosX = 525 + -e.offsetX * .05 + "px"
+                secPlantBgPosY = 700 + e.offsetY * .05 + "px"
+                thirdPlantBgPosX = 1500 + e.offsetX * .05 + "px"
+                thirdPlantBgPosY = 500 + -e.offsetY * .05 + "px"
+                fourthPlantBgPosX = 250 + e.offsetX * .01 + "px"
+                fourthPlantBgPosY = 50 + e.offsetY * .01 + "px"
+
+                mover.style.backgroundPositionX = "0px, 0px, " + firstPlantBgPosX + ", " + secPlantBgPosX + ", " + thirdPlantBgPosX + ", " + fourthPlantBgPosX;
+                mover.style.backgroundPositionY = "58px, 58px, "+ firstPlantBgPosY + ", " + secPlantBgPosY + ", " + thirdPlantBgPosY + ", " + fourthPlantBgPosY;
+            });
+
+            container.addEventListener("mouseenter", function() {
+            
+            setTimeout(function() {
+                mover.classList.add("no-more-slidey");
+                container.removeEventListener("mouseenter");
+            }, 250);
+            
+            });
+        </script>
         <div class="navBar head3">
             <span class="left">
                 <img src="assets/melodySheep_icon.png" height="20"></img>
                 <span>&nbsp;&nbsp;&nbsp;MELODYSHEEP</span>
             </span>
-            <a class="right" href="about.html">ABOUT</a>
-            <a class="right" href="shop.html">SHOP</a>
-            <a class="right" href="music.html">MUSIC</a>
-            <a class="right" href="projects.html">PROJECTS</a>
-            <a class="right" href="index.html">HOME</a>
+            <a class="right" onclick="unloadPage('Projects');loadPage('About');">ABOUT</a>
+            <a class="right" onclick="unloadPage('Projects');loadPage('Shop');">SHOP</a>
+            <a class="right" onclick="unloadPage('Projects');loadPage('Music');">MUSIC</a>
+            <a class="right" href="#">PROJECTS</a>
+            <a class="right" onclick="unloadPage('Projects');loadPage('Index');">HOME</a>
         </div>
         <div class="title">
             <span class="head1">
@@ -26,14 +52,12 @@
             </span>
             <br>
             <br>
-            <a class="titleButton" onclick="loadPage('Project')">
+            <a class="titleButton" onclick="loadPage('ProjectSubPage')">
                 Learn more
             </a>
         </div>
         <div class="scrollNoticeContainer">
-            <div class="scrollNotice head2">
-                <span>SCROLL TO CONTINUE</span>
-            </div>
+            <a class="titleButton head2"  onclick="unloadPage('Projects');loadPage('Music');">CONTINUE</a>
         </div>
         <div class="footer">
             <img src="assets/youtube_icon.png" height="20"></img>
