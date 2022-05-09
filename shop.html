@@ -6,17 +6,17 @@
     <body class="shopPageBody" id="shopPageBody">
         <script>
             window.addEventListener('message', function(e) {
-                mover.style.backgroundPositionX = "500px, 1250px" ;
-                mover.style.backgroundPositionY = "500px, 0px";
+                mover.style.backgroundPositionX = "38%, 87%" ;
+                mover.style.backgroundPositionY = "85%, -18%";
             }, false)
             var container = document.querySelector("#shopPageHTML");
             var mover = document.querySelector("#shopPageBody");
 
             container.addEventListener("mousemove", function(e) {
-                firstPlantBgPosX = 500 + e.offsetX * .05 + "px"
-                firstPlantBgPosY = 500 + e.offsetY * .05 + "px"
-                secPlantBgPosX = 1250 + -e.offsetX * .04 + "px"
-                secPlantBgPosY = -e.offsetY * .03 + "px"
+                firstPlantBgPosX = 38 + e.offsetX * .005 + "%"
+                firstPlantBgPosY = 85 + e.offsetY * .005 + "%"
+                secPlantBgPosX = 87 + -e.offsetX * .004 + "%"
+                secPlantBgPosY = -18 + -e.offsetY * .003 + "%"
 
                 mover.style.backgroundPositionX = firstPlantBgPosX + ", " + secPlantBgPosX;
                 mover.style.backgroundPositionY = firstPlantBgPosY + ", " + secPlantBgPosY;

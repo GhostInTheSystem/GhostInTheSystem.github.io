@@ -6,21 +6,21 @@
     <body class="indexPageBody" id="indexPageBody">
         <script>
             window.addEventListener('message', function(e) {
-                mover.style.backgroundPositionX = "0px, 0px, 1150px, 350px, 1000px" ;
-                mover.style.backgroundPositionY = "245px, 120px, 375px, 200px, 150px";
+                mover.style.backgroundPositionX = "0%, 0%, 90%, 22%, 53%" ;
+                mover.style.backgroundPositionY = "115%, 63%, 110%, 38%, 17%";
             }, false)
             var container = document.querySelector("#indexPageHTML");
             var mover = document.querySelector("#indexPageBody");
             container.addEventListener("mousemove", function(e) {
-                firstPlantBgPosX = 1150 + -e.offsetX * .01 + "px"
-                firstPlantBgPosY = 375 + -e.offsetY * .01 + "px"
-                secPlantBgPosX = 350 + -e.offsetX * .03 + "px"
-                secPlantBgPosY = 200 + e.offsetY * .03 + "px"
-                thirdPlantBgPosX = 1000 + e.offsetX * .05 + "px"
-                thirdPlantBgPosY = 150 + e.offsetY * .05 + "px"
+                firstPlantBgPosX = 90 + -e.offsetX * .001 + "%"
+                firstPlantBgPosY = 110 + -e.offsetY * .001 + "%"
+                secPlantBgPosX = 22 + -e.offsetX * .003 + "%"
+                secPlantBgPosY = 38 + e.offsetY * .003 + "%"
+                thirdPlantBgPosX = 53 + e.offsetX * .005 + "%"
+                thirdPlantBgPosY = 17 + e.offsetY * .005 + "%"
 
-                mover.style.backgroundPositionX = "0px, 0px, " + firstPlantBgPosX + ", " + secPlantBgPosX + ", " + thirdPlantBgPosX;
-                mover.style.backgroundPositionY = "245px, 120px, "+ firstPlantBgPosY + ", " + secPlantBgPosY + ", " + thirdPlantBgPosY;
+                mover.style.backgroundPositionX = "0%, 0%, " + firstPlantBgPosX + ", " + secPlantBgPosX + ", " + thirdPlantBgPosX;
+                mover.style.backgroundPositionY = "115%, 63%, "+ firstPlantBgPosY + ", " + secPlantBgPosY + ", " + thirdPlantBgPosY;
             });
 
             container.addEventListener("mouseenter", function() {

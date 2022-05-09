@@ -6,23 +6,23 @@
     <body class="projectPageBody" id="projectPageBody">
         <script>
             window.addEventListener('message', function(e) {
-                mover.style.backgroundPositionX = "0px, 0px, 1450px, 525px, 1500px, 250px" ;
-                mover.style.backgroundPositionY = "58px, 58px, 100px, 700px, 500px, 50px";
+                mover.style.backgroundPositionX = "0%, 0%, 86%, 32%, 98%, 15%" ;
+                mover.style.backgroundPositionY = "100%, 100%, 5%, 115%, 60%, -10%";
             }, false)
             var container = document.querySelector("#projectPageHTML");
             var mover = document.querySelector("#projectPageBody");
             container.addEventListener("mousemove", function(e) {
-                firstPlantBgPosX = 1450 + -e.offsetX * .05 + "px"
-                firstPlantBgPosY = 100 + -e.offsetY * .05 + "px"
-                secPlantBgPosX = 525 + -e.offsetX * .05 + "px"
-                secPlantBgPosY = 700 + e.offsetY * .05 + "px"
-                thirdPlantBgPosX = 1500 + e.offsetX * .05 + "px"
-                thirdPlantBgPosY = 500 + -e.offsetY * .05 + "px"
-                fourthPlantBgPosX = 250 + e.offsetX * .01 + "px"
-                fourthPlantBgPosY = 50 + e.offsetY * .01 + "px"
+                firstPlantBgPosX = 86 + -e.offsetX * .005 + "%"
+                firstPlantBgPosY = 5 + -e.offsetY * .005 + "%"
+                secPlantBgPosX = 32 + -e.offsetX * .005 + "%"
+                secPlantBgPosY = 115 + e.offsetY * .005 + "%"
+                thirdPlantBgPosX = 98 + e.offsetX * .005 + "%"
+                thirdPlantBgPosY = 60 + -e.offsetY * .005 + "%"
+                fourthPlantBgPosX = 15 + e.offsetX * .001 + "%"
+                fourthPlantBgPosY = -10 + e.offsetY * .001 + "%"
 
-                mover.style.backgroundPositionX = "0px, 0px, " + firstPlantBgPosX + ", " + secPlantBgPosX + ", " + thirdPlantBgPosX + ", " + fourthPlantBgPosX;
-                mover.style.backgroundPositionY = "58px, 58px, "+ firstPlantBgPosY + ", " + secPlantBgPosY + ", " + thirdPlantBgPosY + ", " + fourthPlantBgPosY;
+                mover.style.backgroundPositionX = "0%, 0%, " + firstPlantBgPosX + ", " + secPlantBgPosX + ", " + thirdPlantBgPosX + ", " + fourthPlantBgPosX;
+                mover.style.backgroundPositionY = "100%, 100%, "+ firstPlantBgPosY + ", " + secPlantBgPosY + ", " + thirdPlantBgPosY + ", " + fourthPlantBgPosY;
             });
 
             container.addEventListener("mouseenter", function() {

@@ -543,9 +543,9 @@ body{
 
 .aboutPageBody {
     background-image: url(./assets/AboutPageBackground/properPlanet.png);
-    background-size: 90%;
+    background-size: 50%;
     background-repeat: no-repeat;
-    background-position: top -50px right 0px;
+    background-position: top -120px left 100%;
     transition: background-position 0.25s;
 }
 
@@ -559,9 +559,9 @@ body{
     background-image: 
         url(./assets/ShopPageBackground/shopPlanet1.png), 
         url(./assets/ShopPageBackground/shopPlanet2.png);
-    background-size: 20%, 30%;
+    background-size: 18%, 30%;
     background-repeat: no-repeat;
-    background-position: bottom 80px left 520px, right 50px top 25px;
+    background-position: top 85% left 38%, top -18% left 87%;
     transition: background-position 0.25s;
 }
 
@@ -578,9 +578,9 @@ body{
         url(./assets/IndexBackground/papaBear.png),
         url(./assets/IndexBackground/mamaBear.png),
         url(./assets/IndexBackground/babyBear.png);
-    background-size: 100%, 100%, 25%, 15%, 5%;
+    background-size: 100%, 100%, 40%, 20%, 7%;
     background-repeat: no-repeat;
-    background-position: top 245px left 0px, top 120px left 0px, top 375px left 1150px, top 200px left 350px, top 150px left 1000px;
+    background-position: top 115% left 0%, top 63% left 0%, top 110% left 90%, top 38% left 22%, top 17% left 53%;
     transition: background-position 0.25s;
 }
 
@@ -600,9 +600,9 @@ body{
         url(./assets/ProjectBackground/rockTwo.png),
         url(./assets/ProjectBackground/rockThree.png),
         url(./assets/ProjectBackground/rockFour.png);
-    background-size: 100%, 100%, 10%, 15%, 18%, 22%;
+    background-size: 100%, 100%, 13%, 20%, 20%, 26%;
     background-repeat: no-repeat;
-    background-position: bottom, bottom, top 100px left 1450px, top 700px left 525px, top 400px left 1500px, top 50px left 250px;
+    background-position: top 100% left 0%, top 100% left 0%, top 5% left 86%, top 115% left 32%, top 60% left 98%, top -10% left 15%;
     transition: background-position 0.25s;
 }
 
@@ -618,9 +618,9 @@ body{
     background-image: 
         url(./assets/MusicBackground/musicPlanet1.png),
         url(./assets/MusicBackground/musicPlanet2.png);
-    background-size: 10%, 35%;
+    background-size: 12%, 38%;
     background-repeat: no-repeat;
-    background-position: top 150px left 1200px, top 150px left 200px;
+    background-position: top 12% left 70%, top 35% left 24%;
     transition: background-position 0.25s;
 }
 

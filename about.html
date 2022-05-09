@@ -8,13 +8,13 @@
             var container = document.querySelector("#aboutPageHTML");
             var mover = document.querySelector("#aboutPageBody");
             window.addEventListener('message', function(e) {
-                mover.style.backgroundPositionX = "180px" ;
-                mover.style.backgroundPositionY = "-60px";
+                mover.style.backgroundPositionX = "100%" ;
+                mover.style.backgroundPositionY = "-120px";
             }, false)
 
             container.addEventListener("mousemove", function(e) {
-                mover.style.backgroundPositionX = 180 + e.offsetX * .02 + "px";
-                mover.style.backgroundPositionY = -60 + e.offsetY * .02 + "px";
+                mover.style.backgroundPositionX = 100 + e.offsetX * .002 + "%";
+                mover.style.backgroundPositionY = -120 + e.offsetY * .02 + "px";
             });
 
             container.addEventListener("mouseenter", function() {

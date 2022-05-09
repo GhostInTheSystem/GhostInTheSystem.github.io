@@ -66,6 +66,7 @@
                         break;
                     case 'unloadIndex':
                         document.getElementById('index').contentWindow.postMessage("message", "*");
+                        console.log()
                         setTimeout(function(){
                             document.getElementById('index').style.display = "none";
                             document.getElementById('indexVid').style.display = "block";
@@ -159,6 +160,6 @@
     <iframe src="musicSubPage.html" id="musicSubPage" class="hiddenAtStart" title="musicSubPage" height="100%" width="100%"></iframe>
     <iframe src="shop.html" id="shop" title="shop" height="100%"  class="hiddenAtStart" width="100%"></iframe>
     <iframe src="shopSubPage.html" id="shopSubPage" class="hiddenAtStart" title="shopSubPage" height="100%" width="100%"></iframe>
-    <iframe src="about.html" id="about" title="about" height="100%"  class="hiddenAtStart" width="100%"></iframe>
+    <iframe src="about.html" id="about" title="about" class="hiddenAtStart" height="100%" width="100%"></iframe>
     <iframe src="aboutSubPage.html" id="aboutSubPage" class="hiddenAtStart" title="aboutSubPage" height="100%" width="100%"></iframe>
 </html>

@@ -6,16 +6,16 @@
     <body class="musicPageBody" id="musicPageBody">
         <script>
             window.addEventListener('message', function(e) {
-                mover.style.backgroundPositionX = "1200px, 200px" ;
-                mover.style.backgroundPositionY = "150px, 150px";
+                mover.style.backgroundPositionX = "70%, 24%" ;
+                mover.style.backgroundPositionY = "12%, 35%";
             }, false)
             var container = document.querySelector("#musicPageHTML");
             var mover = document.querySelector("#musicPageBody");
             container.addEventListener("mousemove", function(e) {
-                firstPlantBgPosX = 1200 + -e.offsetX * .05 + "px"
-                firstPlantBgPosY = 150 + -e.offsetY * .05 + "px"
-                secPlantBgPosX = 200 + e.offsetX * .04 + "px"
-                secPlantBgPosY = 150 + e.offsetY * .02 + "px"
+                firstPlantBgPosX = 70 + -e.offsetX * .005 + "%"
+                firstPlantBgPosY = 12 + -e.offsetY * .005 + "%"
+                secPlantBgPosX = 24 + e.offsetX * .004 + "%"
+                secPlantBgPosY = 35 + e.offsetY * .002 + "%"
 
                 mover.style.backgroundPositionX = firstPlantBgPosX + ", " + secPlantBgPosX;
                 mover.style.backgroundPositionY = firstPlantBgPosY + ", " + secPlantBgPosY;
