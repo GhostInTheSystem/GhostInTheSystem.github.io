@@ -7,7 +7,7 @@
         <script>
             window.addEventListener('message', function(e) {
                 mover.style.backgroundPositionX = "0%, 0%, 90%, 22%, 53%" ;
-                mover.style.backgroundPositionY = "115%, 63%, 110%, 38%, 17%";
+                mover.style.backgroundPositionY = "115%, 75%, 110%, 38%, 17%";
             }, false)
             var container = document.querySelector("#indexPageHTML");
             var mover = document.querySelector("#indexPageBody");
@@ -20,7 +20,7 @@
                 thirdPlantBgPosY = 17 + e.offsetY * .005 + "%"
 
                 mover.style.backgroundPositionX = "0%, 0%, " + firstPlantBgPosX + ", " + secPlantBgPosX + ", " + thirdPlantBgPosX;
-                mover.style.backgroundPositionY = "115%, 63%, "+ firstPlantBgPosY + ", " + secPlantBgPosY + ", " + thirdPlantBgPosY;
+                mover.style.backgroundPositionY = "115%, 75%, "+ firstPlantBgPosY + ", " + secPlantBgPosY + ", " + thirdPlantBgPosY;
             });
 
             container.addEventListener("mouseenter", function() {

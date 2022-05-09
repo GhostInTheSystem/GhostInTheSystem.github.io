@@ -169,7 +169,7 @@ a {
 }
 
 .lifeBeyondWrapper{
-    height: 600px;
+    height: 650px;
     background-color: #1d2025;
 }
 
@@ -188,8 +188,9 @@ a {
 }
 
 .amalgDesc {
-    width: 33%;
+    width: 28%;
     float: right;
+    margin-right: 5%;
 }
 
 .amalgDescSpacer {
@@ -409,7 +410,8 @@ a {
 
 .shopItemDesc{
     float: right;
-    width: 50%;
+    width: 45%;
+    margin-right: 5%;
 }
 
 .shopItem img{
@@ -444,6 +446,7 @@ a {
 .contactFormDesc{
     margin-top: 5%;
     margin-left: 10%;
+    margin-right: 10%;
     margin-bottom: 30px;
 }
 
@@ -532,17 +535,6 @@ body{
 
 .aboutPageBody {
     background-image: url(./assets/AboutPageBackground/properPlanet.png);
-    background-position: right;
-}
-
-.aboutPageHTML {
-    background-image: url(./assets/AboutPageBackground/aboutBG.png);
-    background-size: cover;
-    background-position: center;
-}
-
-.aboutPageBody {
-    background-image: url(./assets/AboutPageBackground/properPlanet.png);
     background-size: 50%;
     background-repeat: no-repeat;
     background-position: top -120px left 100%;
@@ -580,7 +572,7 @@ body{
         url(./assets/IndexBackground/babyBear.png);
     background-size: 100%, 100%, 40%, 20%, 7%;
     background-repeat: no-repeat;
-    background-position: top 115% left 0%, top 63% left 0%, top 110% left 90%, top 38% left 22%, top 17% left 53%;
+    background-position: top 115% left 0%, top 75% left 0%, top 110% left 90%, top 38% left 22%, top 17% left 53%;
     transition: background-position 0.25s;
 }
 
